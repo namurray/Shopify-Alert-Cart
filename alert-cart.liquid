@@ -1,0 +1,4 @@
+<!-- include wherever cart appears in your header -->
+
+<label {% if cart.item_count > 0 %} class="alert" {% endif %}>
+{{ cart.item_count }} {{ 'layout.header.item_count' | t: count: cart.item_count }}</label>

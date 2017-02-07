@@ -1,6 +1,12 @@
-<!-- include wherever cart appears in your header 
+{% comment %} 
+put this inside the tags that span your cart text/icon/count
 the "alert" class styling is up to you!
--->
+{% endcomment %}
 
-<label {% if cart.item_count > 0 %} class="alert" {% endif %}>
-{{ cart.item_count }} {{ 'layout.header.item_count' | t: count: cart.item_count }}</label>
+{% if cart.item_count > 0 %} class="alert" {% endif %}
+
+{% comment %}
+example:
+  <label {% if cart.item_count > 0 %} class="alert" {% endif %}>
+  {{ cart.item_count }} {{ 'layout.header.item_count' | t: count: cart.item_count }}</label>
+{% endcomment %}
